@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Riverside Menu|Where students come to work</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="C-Drive.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>
+                Riverside Cafe
+            </h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="History.html">History</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="YOTW.html">YOTW</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2 id="marginAndPaddingSetter">
+                Jobs at The Riverside Cafe
+            </h2>
+
+            <p>
+                Want to work at The Riverside Cafe? Fill out the form below to start your application.
+                <br>Required fields are marked with an asterik(*).
+            </p>
+            <div id="form">
+                <label for="name"> * Name:</label>
+                <input type="text" name="myName" id="name" required>
+                <label for="E-Mail"> * E-mail:</label>
+                <input type="email" name="myE-mail" id="E-Mail" required>
+                <label for="Experience"> * Experience:</label>
+                <textarea id="Experience" name="myExperience" cols="21" rows="2" required></textarea>
+                <button onclick="hideForm()">Apply Now</button>
+            </div>
+            <div id="thankYou">
+                <h2 id="h2Change"></h2>
+            </div>
+        </main>
+        <style>
+            #thankYou {
+                display: none;
+            }
+        </style>
+        <script>
+        function hideForm(){
+          var x = document.getElementById("form");
+          x.style.display = "none";
+          experience=document.getElementById("Experience").value
+          name=document.getElementById("name").value
+          email=document.getElementById("E-Mail").value
+          getThankYou(name,experience, email);
+        }
+        function getThankYou(){
+          var y = document.getElementById("thankYou");
+          var h2 = document.getElementById("h2Change");
+          y.style.display = "block";
+          h2.innerHTML=  "Thank You "+name+"! The email that you indicated was "+email+". The experience was "+experience;
+        }
+        </script>
+
+    </div>
+</body>
+
+  <footer>
+            <a href="email_fake.html">Fissure19@student.fdu.edu</a>
+</footer>
+<script type="text/javascript" src="Audio-HTML5(Jobs).js"></script>
+</html>
